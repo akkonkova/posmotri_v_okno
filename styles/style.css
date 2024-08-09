@@ -131,7 +131,7 @@ ol {
   .search-form__pseudo-checkbox */
 
 .search-form__submit-button {
-
+inline-size: 194px;
 }
 
 .button {
@@ -171,8 +171,16 @@ ol {
   align-items: flex-start;
   gap: 30px;
   overflow: auto;
-  inline-size: 399px;
+  /* inline-size: 399px; */
   block-size: 298px;
+}
+
+/* .content__list > :last-child {
+  inline-size: 100%;
+} */
+
+.content__list > :has(.more-button) {
+  inline-size: 100%;
 }
 
 .content__accent {
@@ -229,6 +237,10 @@ ol {
   block-size: 103px;
 }
 
-/*.more-button-template
-  .more-button
-  .error-template*/
+/*.more-button-template*/
+
+.more-button {
+  inline-size: 100%;
+}
+
+/*.error-template*/
