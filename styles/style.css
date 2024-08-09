@@ -67,7 +67,6 @@ ol {
   position: relative;
   inline-size: 711px;
   block-size: 386px;
-
 }
 
 .result__video {
@@ -80,7 +79,7 @@ ol {
 .search-form {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 40px;
 }
 
@@ -89,35 +88,63 @@ ol {
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
+  border: none;
 }
 
 .search-form__fieldset-title {
   color: #fff;
   font-family: inherit;
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   line-height: normal;
 }
 
-/*
-  .search-form__label
-  .search-form__label-text
-  .search-form__textfield
-  .search-form__checkbox-list
+.search-form__label {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 5px;
+  inline-size: fit-content;
+}
+
+/*.search-form__label-text { для псевдоэлементов
+} */
+
+.search-form__textfield {
+  border: none;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  font-weight: 400;
+  font-size: inherit;
+  line-height: normal;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-inline-size: 225px;
+}
+
+/*.search-form__checkbox-list
   .search-form__checkbox
-  .search-form__pseudo-checkbox*/
+  .search-form__pseudo-checkbox */
+
+.search-form__submit-button {
+
+}
 
 .button {
   border: 1px solid currentColor;
   color: #fff;
-  font-family: inherit;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   text-align: center;
   background: transparent;
   cursor: pointer;
   block-size: 34px;
-  }
+}
 
 .content__details {
   display: flex;
@@ -131,8 +158,8 @@ ol {
 .title {
   color: #fff;
   font-family: Oswald, sans-serif;
-  font-size: 75px;
   font-weight: 700;
+  font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
 }
@@ -152,7 +179,7 @@ ol {
   color: #545050;
 }
 
- /*.preloader-template
+/*.preloader-template
   .square
   .cards-list-item-template
   .content__list-item*/
@@ -167,8 +194,8 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-block: 2px;
   padding-inline: 2px;
+  padding-block: 2px;
   inline-size: 394px;
   block-size: 107px;
 }
@@ -179,31 +206,29 @@ ol {
 }
 
 .content__video-card-title {
+  padding-block-end: 6px;
   color: #fff;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
-  padding-block-end: 6px;
-  }
+}
 
 .content__video-card-description {
-  color: #FFF;
-  font-family: "Fira Sans Condensed", sans-serif;
-  font-size: 18px;
+  color: #fff;
   font-weight: 400;
+  font-size: 18px;
   line-height: 90%;
 }
- .content__video-card-thumbnail {
+.content__video-card-thumbnail {
+  flex-shrink: 0;
   object-fit: cover;
   object-position: center;
   inline-size: 194px;
   block-size: 103px;
-  flex-shrink: 0;
- }
+}
 
-
-   /*.more-button-template
+/*.more-button-template
   .more-button
   .error-template*/
