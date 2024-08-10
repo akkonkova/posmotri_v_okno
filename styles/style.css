@@ -9,12 +9,16 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   inline-size: 1200px;
+  padding-block: 134px;
   block-size: 100%;
 }
 
@@ -52,7 +56,6 @@ ol {
   align-items: flex-end;
   gap: 29px;
   padding-inline: 30px;
-  padding-block: 134px;
   inline-size: 100%;
 }
 
@@ -101,12 +104,21 @@ ol {
 
 .search-form__label {
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 5px;
   inline-size: fit-content;
 }
 
-.search-form__label-text:hover {
+.search-form__textfield:hover{
+  cursor: text;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
+}
+
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   text-underline-position: under;
   cursor: pointer;
@@ -126,6 +138,10 @@ ol {
   -moz-appearance: none;
   appearance: none;
   min-inline-size: 225px;
+}
+
+.search-form__textfield:focus {
+  outline: none;
 }
 
 .search-form__checkbox-list {
@@ -212,15 +228,15 @@ ol {
   color: #545050;
 }
 
-.content__list-item:hover {
-  text-decoration: underline;
-  text-underline-position: under;
-}
-
 .content__card-link {
   display: block;
   color: #fff;
   text-decoration: none;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .content__video-card {
