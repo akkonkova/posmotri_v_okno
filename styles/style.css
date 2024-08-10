@@ -108,6 +108,8 @@ ol {
 
 .search-form__label-text:hover {
   text-decoration: underline;
+  text-underline-position: under;
+  cursor: pointer;
 }
 
 .search-form__textfield {
@@ -120,7 +122,6 @@ ol {
   font-size: inherit;
   line-height: normal;
   background-color: transparent;
-  cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -132,16 +133,12 @@ ol {
   gap: 15px;
 }
 
-/*.search-form__checkbox {
-  display: block;
-}*/
-
 .search-form__pseudo-checkbox {
   display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #fff;
   background-color: transparent;
-  align-items: center;
-  justify-content: center;
   inline-size: 19px;
   block-size: 19px;
 }
@@ -150,12 +147,12 @@ ol {
   cursor: pointer;
 }
 
- .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: "";
   display: block;
-  background-color: #fff;
   width: 15px;
   height: 15px;
+  background-color: #fff;
 }
 
 .search-form__submit-button {
@@ -163,17 +160,20 @@ ol {
 }
 
 .button {
+  align-self: flex-end;
   border: 1px solid currentColor;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 18px;
+  font-style: normal;
   text-align: center;
   background: transparent;
-  cursor: pointer;
   min-block-size: 34px;
-  align-self: flex-end;
+}
+
+.button:hover {
+  cursor: pointer;
 }
 
 .content__details {
@@ -201,7 +201,6 @@ ol {
   align-items: flex-start;
   gap: 30px;
   overflow: auto;
-  /* inline-size: 399px; */
   block-size: 298px;
 }
 
@@ -213,10 +212,10 @@ ol {
   color: #545050;
 }
 
-/*.
-  .square
-  .cards-list-item-template
-  .content__list-item*/
+.content__list-item:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+}
 
 .content__card-link {
   display: block;
@@ -243,8 +242,8 @@ ol {
   color: #fff;
   font-family: Oswald, sans-serif;
   font-weight: 700;
-  font-style: normal;
   font-size: 30px;
+  font-style: normal;
   line-height: 100%;
   text-transform: uppercase;
 }
