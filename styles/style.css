@@ -249,11 +249,16 @@ ol {
   display: block;
   color: #fff;
   text-decoration: none;
+  margin: 2px 2px;
 }
 
 .content__card-link:hover {
   text-decoration: underline;
   text-underline-position: under;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__video-card {
