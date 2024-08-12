@@ -54,7 +54,7 @@ ol {
 .content {
   display: flex;
   align-items: flex-end;
-  gap: 23px;
+  gap: 29px;
   padding-inline: 30px;
   inline-size: 100%;
 }
@@ -230,7 +230,7 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 23px;
   align-self: flex-start;
   inline-size: 100%;
   block-size: 100%;
